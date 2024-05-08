@@ -36,7 +36,7 @@
 
         go_next {
             bindings = <&kp LG(RIGHT)>;
-            key-positions = <36 19>;
+            key-positions = <36 21>;
         };
 
         lock_pc {
@@ -92,7 +92,7 @@
             bindings = <
 &kp TAB    &kp EXCL              &kp AT                &kp HASH    &kp DLLR           &kp PRCNT          &kp CARET  &kp AMPS   &kp ASTRK  &kp LPAR  &kp RPAR  &kp BSPC
 &kp LCTRL  &kp C_BRIGHTNESS_DEC  &kp C_BRIGHTNESS_INC  &kp K_MUTE  &kp C_VOLUME_DOWN  &kp C_VOLUME_UP    &kp MINUS  &kp EQUAL  &kp LBKT   &kp RBKT  &kp BSLH  &kp GRAVE
-&kp LSHFT  &trans                &trans                &trans      &trans             &trans             &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
+&kp LSHFT  &trans                &trans                &kp K_PREV  &kp K_PLAY_PAUSE   &kp K_NEXT         &kp UNDER  &kp PLUS   &kp LBRC   &kp RBRC  &kp PIPE  &kp TILDE
                                                        &kp LGUI    &trans             &kp SPACE          &kp RET    &trans     &kp RALT
             >;
 
