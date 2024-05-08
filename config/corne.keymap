@@ -38,6 +38,11 @@
             bindings = <&kp LG(RIGHT)>;
             key-positions = <36 19>;
         };
+
+        lock_pc {
+            bindings = <&kp K_POWER>;
+            key-positions = <19 20 36>;
+        };
     };
 
     keymap {
