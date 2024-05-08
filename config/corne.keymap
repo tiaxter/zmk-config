@@ -28,6 +28,16 @@
             key-positions = <19 20>;
             layers = <0>;
         };
+
+        go_back {
+            bindings = <&kp LG(LEFT)>;
+            key-positions = <36 18>;
+        };
+
+        go_next {
+            bindings = <&kp LG(RIGHT)>;
+            key-positions = <36 19>;
+        };
     };
 
     keymap {
