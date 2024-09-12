@@ -8,6 +8,15 @@
 #include <dt-bindings/zmk/bt.h>
 #include <dt-bindings/zmk/keys.h>
 
+#define BT_SWITCH(NUMBER) \
+  bt_##NAME { \
+    compatible = "zmk,behavior-macro"; \
+    #binding-cells = <0>; \
+    label = "Bluetooth keyboard and mouse switch"; \
+    timeout-ms = <50>; \
+    bindings = <&kp LG(LA(NUMBER_ + NUMBER)) &bt BT_SEL NUMBER - 1>; \
+  };
+
 / {
     behaviors {
         holdortap: holdortap {
@@ -46,12 +55,9 @@
     };
 
     macros {
-        bt1: bt1 {
-            compatible = "zmk,behavior-macro";
-            #binding-cells = <0>;
-            bindings = <&kp LG(LA(NUMBER_1)) &bt BT_SEL 0>;
-            label = "BT1";
-        };
+        bt: BT_SWITCH(1);
+        bt2: BT_SWITCH(2);
+        bt3: BT_SWITCH(3);
     };
 
     keymap {
@@ -83,7 +89,7 @@
 
             bindings = <
 &kp TAB    &kp N1  &kp N2        &kp N3        &kp N4        &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&none      &bt1    &bt BT_SEL 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4               &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&none      &bt1    &bt bt1 1  &bt BT_SEL 2  &bt BT_SEL 3  &bt BT_SEL 4               &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
 &kp LSHFT  &trans  &trans        &trans        &trans        &trans                     &trans    &trans    &trans    &trans     &trans  &trans
                                  &kp LGUI      &trans        &holdortap LSHIFT SPACE    &kp RET   &trans    &kp RALT
             >;
