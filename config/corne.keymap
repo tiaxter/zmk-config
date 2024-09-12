@@ -52,6 +52,18 @@
             bindings = <&kp LG(LA(NUMBER_1)) &bt BT_SEL 0>;
             label = "BT1";
         };
+        bt2: bt2 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(NUMBER_2)) &bt BT_SEL 1>;
+            label = "BT2";
+        };
+        bt3: bt3 {
+            compatible = "zmk,behavior-macro";
+            #binding-cells = <0>;
+            bindings = <&kp LG(LA(NUMBER_3)) &bt BT_SEL 2>;
+            label = "BT3";
+        };
     };
 
     keymap {
