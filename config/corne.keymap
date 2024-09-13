@@ -49,19 +49,21 @@
         bt1: bt1 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LA(NUMBER_1)) &bt BT_SEL 0>;
+            bindings = <&kp LG(RA(NUMBER_1)) &bt BT_SEL 0>;
             label = "BT1";
         };
+
         bt2: bt2 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LA(NUMBER_2)) &bt BT_SEL 1>;
+            bindings = <&kp LG(RA(NUMBER_2)) &bt BT_SEL 1>;
             label = "BT2";
         };
+
         bt3: bt3 {
             compatible = "zmk,behavior-macro";
             #binding-cells = <0>;
-            bindings = <&kp LG(LA(NUMBER_3)) &bt BT_SEL 2>;
+            bindings = <&kp LG(RA(NUMBER_3)) &bt BT_SEL 2>;
             label = "BT3";
         };
     };
@@ -94,10 +96,10 @@
             //                    | GUI |     | SPC |   | ENT |     | ALT |
 
             bindings = <
-&kp TAB    &kp N1  &kp N2        &kp N3        &kp N4        &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
-&none      &bt1    &bt2  &bt3  &bt BT_SEL 3  &bt BT_SEL 4               &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
-&kp LSHFT  &trans  &trans        &trans        &trans        &trans                     &trans    &trans    &trans    &trans     &trans  &trans
-                                 &kp LGUI      &trans        &holdortap LSHIFT SPACE    &kp RET   &trans    &kp RALT
+&kp TAB    &kp N1  &kp N2  &kp N3    &kp N4        &kp N5                     &kp N6    &kp N7    &kp N8    &kp N9     &kp N0  &kp BSPC
+&none      &bt1    &bt2    &bt3      &bt BT_SEL 3  &bt BT_SEL 4               &kp LEFT  &kp DOWN  &kp UP    &kp RIGHT  &trans  &trans
+&kp LSHFT  &trans  &trans  &trans    &trans        &trans                     &trans    &trans    &trans    &trans     &trans  &trans
+                           &kp LGUI  &trans        &holdortap LSHIFT SPACE    &kp RET   &trans    &kp RALT
             >;
 
             label = "Lower";
